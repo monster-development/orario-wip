@@ -1,0 +1,38 @@
+.
+├── custom.d.ts
+├── dist
+│   ├── assets
+│   │   ├── index-BOQtIojW.css
+│   │   ├── index-LjGEb-J7.js
+│   │   ├── orario_logo_1-Bj2E9G5H.png
+│   │   ├── phone_with_logo-qtuPT4GP.png
+│   │   ├── stores-B7NBl2h4.png
+│   │   └── woman_holding_phone-DT8iLj06.jpg
+│   ├── index.html
+│   └── vite.svg
+├── eslint.config.js
+├── estructura.txt
+├── index.html
+├── package.json
+├── package-lock.json
+├── public
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── orario_logo_1.png
+│   │   ├── phone_with_logo.png
+│   │   ├── stores.png
+│   │   └── woman_holding_phone.jpg
+│   ├── components
+│   │   └── Header.jsx
+│   ├── css
+│   │   ├── App.css
+│   │   └── header.css
+│   ├── index.css
+│   └── main.jsx
+├── tsconfig.json
+└── vite.config.ts
+
+8 directories, 28 files
