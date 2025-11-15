@@ -1,0 +1,122 @@
+/* ---------------- HEADER ---------------- */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.85); /* semi-transparente */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 0.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-container-not {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo (que ahora es un <Link>) */
+.logo-not {
+  display: flex;           /* fila horizontal */
+  align-items: center;     /* centra verticalmente el texto con la imagen */
+  gap: 0.5rem;             /* espacio entre logo y texto */
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0a0a0a;
+  text-decoration: none !important; /* quita subrayado */
+}
+
+.logo-not:visited,
+.logo-not:active,
+.logo-not:hover {
+  color: #0a0a0a;         /* nunca cambia color */
+  text-decoration: none;
+}
+
+.logo-not img {
+  height: 30px;            /* tamaño del logo */
+  width: auto;
+}
+
+.texto-not {
+  font-size: 1rem;
+  margin-top: 3px;
+}
+
+/* Links de navegación */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-top: 0.4rem;
+}
+
+.nav-links a:hover {
+  color: #27A6F5;
+}
+
+.linkin:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #27A6F5;
+  width: 0;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Botón login */
+a.login-btn {
+  background-color: #27A6F5;
+  color: white !important;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-links a.login-btn:hover {
+  background-color: #1e8cd9;
+  color: #fff !important;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem;
+    width: 100vw;
+  }
+
+  /* Ocultar links en móvil */
+  .linkin {
+    display: none;
+  }
+
+  .logo img {
+    height: 28px;
+  }
+
+  a.login-btn {
+    margin-right: 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+}

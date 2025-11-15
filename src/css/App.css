@@ -1,0 +1,366 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.welcome {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.welcome section {
+  scroll-snap-align: start;
+}
+
+
+
+/* ---------------- HERO ---------------- */
+.hero {
+  position: relative; /* importante para el posicionamiento absoluto interno */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  /* background: linear-gradient(135deg, #e0f7fa 0%, #8ee6f1 100%); */
+  background: #fff;
+  padding: 1rem 12%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start; /* alinea los items al inicio */
+  align-items: center;
+  gap: 1rem; /* controlas aquí la distancia entre hero-content y hero-image-wrapper */
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+  max-width: 550px;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 1s ease forwards 0.3s;
+}
+
+.hero-content h1 {
+  padding-top: 30px;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 3.5rem;
+  font-weight: 500;
+  color: #0a0a0a;
+  padding-left: 10px;
+}
+
+.hero-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-top: -100px;
+  padding-left: 10px;
+  /* padding-bottom: 40px; */
+}
+
+.hero-content h1 span {
+  font-weight: 800;
+  color: #000;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn.primary {
+  background-color: #27A6F5;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn.primary:hover {
+  background-color: #1a8cd8; /* un azul más oscuro al hover */
+}
+
+.btn.secondary {
+  background-color: rgba(186, 192, 196, 0.6);
+  color: #000;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(148, 148, 148, 0.8);
+}
+
+.volver {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, #d1d5db 1px, transparent 1px),
+    linear-gradient(to bottom, #d1d5db 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle 60% at 50% 50%, #000 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle 60% at 50% 50%, #000 30%, transparent 70%);
+}
+
+.hero-image-wrapper {
+  position: relative;
+}
+
+.hero-image {
+  position: relative; /* para que esté encima del fondo */
+  width: 130%;
+  max-width: 800px;
+  transform: rotate(-6deg);
+  animation: fadeInRight 1s ease forwards 0.8s;
+  opacity: 1;
+}
+
+.store-images img {
+  padding-top: 100px;
+  max-width: 250px;
+  margin-left: 100px;
+}
+
+.hero-image-text {
+  position: absolute;
+  bottom: 65px;       
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.hero-image-text p {
+  font-size: 1.2rem;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.store-images img {
+  padding-top: 100px;
+  max-width: 250px;
+  margin-left: 100px;
+}
+
+
+
+/* ---------------- PRODUCT ---------------- */
+.product {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 12%;
+  gap: 14rem;
+  flex-wrap: wrap;
+  background: #fff;
+  opacity: 1;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* .product.visible {
+  opacity: 1;
+  transform: translateY(0);
+}  */
+
+.product-image img {
+  width: 380px;
+  height: auto;
+  border-radius: 25px;
+  object-fit: cover;
+} 
+
+.product-info {
+  max-width: 450px;
+}
+
+.product-info h5 {
+  font-size: 1rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+} 
+
+.product-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.product-info h2 span {
+  font-weight: 700;
+}
+
+.product-info p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* evita scroll horizontal */
+  }
+  
+  .welcome {
+    font-family: "Poppins", sans-serif;
+    color: #111;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .hero {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0%; /* padding más pequeño */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    overflow: hidden;
+    gap: 0rem
+  }
+
+  /* h4 de Orario */
+  .hero-content h4 {
+    order: 2;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding-left: 0;
+  }
+
+  /* Imagen del phone */
+  .hero-image {
+    width: 100%;
+    order: 1;
+    margin-top: 5rem;
+    text-align: center;
+    animation-delay: 0.6s;
+  }
+
+  .hero-content h1 {
+    order: 3;
+    font-size: 1.8rem;
+    padding-left: 0;
+    /* margin-top: -6rem; */
+    line-height: 1.2;
+  }
+
+  .hero-content h4 {
+    opacity: 0;
+  }
+
+  /* Botones */
+  .buttons {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    opacity: 1;
+  }
+
+  .btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  
+  .store-images {
+    display: none;
+  }
+
+  /* Hero image text al pie de todo */
+  .hero-image-text {
+    order: 4;
+    position: static;
+    transform: none;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #333; 
+  }
+
+  /* Hero content ajuste general */
+  .hero-content {
+    flex: 1;
+    order: 2;
+    max-width: 90%;
+    opacity: 0;
+    transform: translateX(0);
+    animation-delay: 0.2s;
+    padding: 0;
+    margin-top: -2rem;
+  }
+
+
+  .product {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    flex-wrap: wrap;
+    background: #fff;
+    opacity: 1;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .product-image img {
+    width: 320px;
+    height: auto;
+    border-radius: 25px;
+    object-fit: cover;
+  } 
+
+  
+}
+
