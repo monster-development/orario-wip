@@ -23,7 +23,7 @@ const Header = () => {
           <a className='linkin' href='#contacto'>
             Contacto
           </a>
-          <a href='/login' className='login-btn'>
+          <a href='#login' className='login-btn'>
             Iniciar sesión
           </a>
         </nav>
